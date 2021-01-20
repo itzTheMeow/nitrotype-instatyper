@@ -1,4 +1,8 @@
-﻿#NoEnv ; "Avoids checking empty variables to see if they are environment variables."
+﻿; NitroType InstaTyper v1.0
+; Made by Meow
+; https://github.com/itzTheMeow/nitrotype-instatyper
+
+#NoEnv ; "Avoids checking empty variables to see if they are environment variables."
 #SingleInstance, force ; Makes sure you only can have one instance of the script at a time.
 SendMode Event ; Allows for a delay inbetween keypresses.
 SetTitleMatchMode, 2 ; Makes sure the title match matches titles that include the value.
