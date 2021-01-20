@@ -90,6 +90,7 @@
         sectionInput.className = "input-field";
         sectionInput.id = "-meow-instatyper-settings-delay";
         sectionInput.value = 10;
+        sectionInput.placeholder = "0";
         sectionInput.style["-moz-appearance"] = "textfield"; // Hides the up/down arrows on firefox.
         sectionInput.onkeyup = function () {
           let num = Number(sectionInput.value) || ""; // Gets a number value from the input.
