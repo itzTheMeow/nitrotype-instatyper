@@ -1,4 +1,4 @@
-﻿; NitroType InstaTyper v1.1
+﻿; NitroType InstaTyper v1.2
 ; Made by Meow
 ; https://github.com/itzTheMeow/nitrotype-instatyper
 
