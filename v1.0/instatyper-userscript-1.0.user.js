@@ -104,7 +104,7 @@
           sectionInput.value = num; // Sets the input to the new number.
 
           let settings = JSON.parse(localStorage.getItem("instatyper_settings") || "{}"); // Get the old settings.
-          settings.keyDelay = num || 10; // Set the new key delay.
+          settings.keyDelay = num == 0 ? 0 : num || 10; // Set the new key delay.
           localStorage.setItem("instatyper_settings", JSON.stringify(settings)); // Save the new settings.
         };
         hole3.appendChild(sectionInput);
