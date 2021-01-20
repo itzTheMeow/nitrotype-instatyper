@@ -1,3 +1,12 @@
+// ==UserScript==
+// @name         NitroType InstaTyper
+// @namespace    https://github.com/itzTheMeow/nitrotype-instatyper
+// @version      1.0
+// @description  An instant typer for NitroType.
+// @author       Meow
+// @match        https://www.nitrotype.com/race
+// ==/UserScript==
+
 (function () {
   let loop = setInterval(function () {
     let texts = document.querySelectorAll(".dash-letter"); // Gets all the letters to be typed.
