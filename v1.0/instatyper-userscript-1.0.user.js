@@ -126,6 +126,10 @@
         line2.className = "list-item";
         line2.innerHTML = `<div class="tsxs tsi tc-ts">Use <b>-1</b> for no delay, <b>0</b> for minimal delay.</div>`;
         hole13.appendChild(line2);
+        let line3 = document.createElement("li"); // Create the third line of description text.
+        line3.className = "list-item";
+        line3.innerHTML = `<div class="tsxs tsi tc-ts"><b>0ms</b> is 1,000+WPM, <b>10ms</b> is around 500WPM, <b>55ms</b> is around 155WPM, <b>70ms</b> is around 135WPM, and <b>100ms</b> is around 100WPM.</div>`;
+        hole13.appendChild(line3);
 
         hole12.appendChild(hole13); // And finally out!
         hole1.appendChild(hole12);
