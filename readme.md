@@ -16,3 +16,10 @@ You must use BOTH the userscript and AHK file in order for this tool to work. Th
 If you want to exit the script, right click the **H** in your taskbar and click _Exit_.
 
 **You can not minimize the window while the script is typing. If you want to cancel the typing, exit/reload the script.**
+
+## Features
+
+- Types automatically during races.
+- Customizeable key press delay.
+- Integrates well with the settings page.
+- Removes ads and centers the page content.
