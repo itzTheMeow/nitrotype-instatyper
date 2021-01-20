@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         NitroType InstaTyper
 // @namespace    https://github.com/itzTheMeow/nitrotype-instatyper
-// @version      1.0
+// @version      1.1
 // @description  An instant typer for NitroType.
 // @author       Meow
-// @match        https://*.nitrotype.com/race
+// @match        https://*.nitrotype.com/race/*
 // @match        https://*.nitrotype.com/profile
 // ==/UserScript==
 
