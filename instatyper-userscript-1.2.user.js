@@ -1,16 +1,32 @@
 // ==UserScript==
 // @name         NitroType InstaTyper
 // @namespace    https://github.com/itzTheMeow/nitrotype-instatyper
-// @version      1.1
+// @version      1.2
 // @description  An instant typer for NitroType.
 // @author       Meow
-// @match        https://*.nitrotype.com/race
-// @match        https://*.nitrotype.com/race/*
-// @match        https://*.nitrotype.com/profile
+// @match        https://*.nitrotype.com/*
 // ==/UserScript==
 
 (function () {
   console.log("Loading InstaTyper...");
+
+  let adloop = setInterval(function () {
+    if (JSON.stringify(localStorage.getItem("instatyper_settings") || "{}").notCentered) {
+      clearInterval(adloop);
+      return;
+    }
+
+    let adBox = document.querySelector(".structure-leaderboard.por");
+    if (adBox) {
+      clearInterval(adloop);
+      adBox.remove();
+      let bodyStyle = document.createElement("style");
+      bodyStyle.className = "reeeee";
+      bodyStyle.innerHTML = `.structure {grid-template-columns: [spacer-start] 160px [main-start] 1024px [end] !important;}`;
+      document.head.appendChild(bodyStyle);
+    }
+  });
+
   if (window.location.href.includes("/race")) {
     let loop = setInterval(function () {
       let texts = document.querySelectorAll(".dash-letter"); // Gets all the letters to be typed.
