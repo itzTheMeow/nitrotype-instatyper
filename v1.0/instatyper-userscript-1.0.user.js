@@ -31,7 +31,7 @@
   } else if (window.location.href.includes("/profile")) {
     let testFor = setInterval(function () {
       let refButton;
-      let allButtons = document.querySelectorAll(".btn.btn--fw"); // Get all of the buttons on the page.
+      let allButtons = document.querySelectorAll(".has-btn .btn.btn--fw"); // Get all of the buttons in the block.
 
       allButtons.forEach((b) => {
         if (b.innerText == "Online Status") refButton = b; // Only get the "Online Status" button.
