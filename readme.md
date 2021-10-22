@@ -20,6 +20,6 @@ If you want to exit the script, right click the **H** in your taskbar and click 
 ## Features
 
 - Types automatically during races.
-- Customizeable key press delay.
+- Customizeable key press delay. https://www.nitrotype.com/profile in InstaTyper Settings
 - Integrates well with the settings page.
 - Removes ads and centers the page content.
