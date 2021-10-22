@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         NitroType InstaTyper
 // @namespace    https://github.com/itzTheMeow/nitrotype-instatyper
-// @version      1.2
+// @version      1.2.1
 // @description  An instant typer for NitroType.
 // @author       Meow
 // @match        https://*.nitrotype.com/*
@@ -38,10 +38,10 @@
       texts.forEach((t) => {
         titleText += t.innerText; // Add each letter to the text to be typed.
       });
-      titleText = titleText.replace(/ /g, " "); // Replaces all the Non Breaking Spaces they use with regular spaces.
+      titleText = titleText.replace(/\xa0/g, " "); // Replaces all the Non Breaking Spaces they use with regular spaces.
 
       let setting = JSON.parse(localStorage.getItem("instatyper_settings") || "{}").keyDelay; // Gets the setting.
-      let keyDelay = setting == 0 ? 0 : setting || 10; // Gets the key press delay.
+      let keyDelay = setting == 0 ? 0 : setting || 100; // Gets the key press delay.
 
       let sent = window.open("", "", "height=1,width=1"); // Creates a popup window.
       sent.document.title = `${titleText}$NT${keyDelay}$NT`; // Sets the title in a format readable by the AHK script.
@@ -108,7 +108,7 @@
         sectionInput.className = "input-field";
         sectionInput.id = "-meow-instatyper-settings-delay";
         let setting = JSON.parse(localStorage.getItem("instatyper_settings") || "{}").keyDelay; // Gets the setting.
-        sectionInput.value = setting == 0 ? 0 : setting || 10; // Sets the value of the input to the saved key delay.
+        sectionInput.value = setting == 0 ? 0 : setting || 100; // Sets the value of the input to the saved key delay.
         sectionInput.placeholder = "0";
         sectionInput.style["-moz-appearance"] = "textfield"; // Hides the up/down arrows on firefox.
         sectionInput.onkeyup = function () {
