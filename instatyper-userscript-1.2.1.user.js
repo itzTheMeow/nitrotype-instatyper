@@ -3,7 +3,8 @@
 // @namespace    https://github.com/itzTheMeow/nitrotype-instatyper
 // @version      1.2.1
 // @description  An instant typer for NitroType.
-// @author       Meow
+// @author       Meow 
+// @contributers Awunes (wait does this exist? is this right?)
 // @match        https://*.nitrotype.com/*
 // ==/UserScript==
 
