@@ -1,4 +1,4 @@
-﻿; NitroType InstaTyper v1.2
+; NitroType InstaTyper v1.2.1
 ; Made by Meow
 ; https://github.com/itzTheMeow/nitrotype-instatyper
 
@@ -13,8 +13,10 @@ loop {
     typetext := StrSplit(typeinput, "$NT")[1] ; Splits the input to get the text to type.
     delay := StrSplit(typeinput, "$NT")[2] ; Splits the input to get the typing delay.
     WinClose ; Closes the popup.
-    SetKeyDelay, delay ; Sets the delay inbetween keypresses.
+    SetKeyDelay, delay ; Sets the delay inbetween keypresses (find the setting in nitrotype "My Settings" in the website itself - set to 100 initially in the .user.js)
     Sleep, 500 ; Waits 500ms before sending the text. (to ensure it doesnt go too early)
+;    Run, notepad ; uncomment this line and the next to test speed before using it on nitrotype.com
+;    Sleep, 250 ; sleep to give it time to open and yeah what ^ he said!
     Send, %typetext% ; Types out the text.
   }
 }
