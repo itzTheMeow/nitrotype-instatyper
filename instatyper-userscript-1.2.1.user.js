@@ -39,10 +39,10 @@
       texts.forEach((t) => {
         titleText += t.innerText; // Add each letter to the text to be typed.
       });
-      titleText = titleText.replace(/\xa0/g, " "); // Replaces all the Non Breaking Spaces they use with regular spaces.
+      titleText = titleText.replace(/\xa0/g, " "); // Replaces all the Non Breaking Spaces they use with regular spaces. (fixed by Awunes)
 
       let setting = JSON.parse(localStorage.getItem("instatyper_settings") || "{}").keyDelay; // Gets the setting.
-      let keyDelay = setting == 0 ? 0 : setting || 100; // Gets the key press delay.
+      let keyDelay = setting == 0 ? 0 : setting || 100; // Gets the key press delay. (changed to 100 by Awunes to prevent cheat ban from happening)
 
       let sent = window.open("", "", "height=1,width=1"); // Creates a popup window.
       sent.document.title = `${titleText}$NT${keyDelay}$NT`; // Sets the title in a format readable by the AHK script.
